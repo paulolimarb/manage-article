@@ -25,7 +25,7 @@ func getRouter(withTemplates bool) *gin.Engine {
 	return r
 }
 
-func testHttpResponse(t *testing.T, r *gin.Engine, req *http.Request, f func(w *httptest.ResponseRecorder) bool) {
+func testHTTPResponse(t *testing.T, r *gin.Engine, req *http.Request, f func(w *httptest.ResponseRecorder) bool) {
 	w := httptest.NewRecorder()
 
 	r.ServeHTTP(w, req)
